@@ -5,7 +5,7 @@ An end-to-end data analysis project examining user sentiment and key pain points
 
 ---
 
-## 📌 Business Problem
+## Business Problem
 
 Competition among e-wallets in Indonesia is getting fiercer, and user satisfaction is a key factor in retaining market share. However, each platform often lacks a clear picture of:
 - How their negative sentiment rate compares to competitors
@@ -14,20 +14,20 @@ Competition among e-wallets in Indonesia is getting fiercer, and user satisfacti
 
 This project aims to answer those questions by quantitatively analyzing user reviews and visualizing the results in an interactive dashboard.
 
-## 🎯 Objectives
+## Objectives
 - Compare average rating and negative sentiment percentage across GoPay, OVO, and DANA
 - Identify the most common pain point categories for each app
 - Analyze rating trends over time to assess each app's performance stability
 - Provide data-driven recommendations for each e-wallet
 
-## 🛠️ Tools & Tech Stack
+## Tools & Tech Stack
 | Stage | Tools |
 |---|---|
 | Data Collection (Scraping) | Python (`google-play-scraper`) |
 | Data Cleaning & Exploration | PostgreSQL |
 | Visualization / Dashboard | Power BI |
 
-## 🔄 Workflow
+## Workflow
 ```
 Scraping (Play Store reviews) → Cleaning & Exploration (PostgreSQL) → Dashboard (Power BI)
 ```
@@ -35,13 +35,13 @@ Scraping (Play Store reviews) → Cleaning & Exploration (PostgreSQL) → Dashbo
 2. **Cleaning & Exploration** — data was cleaned (empty/too-short reviews removed), classified into sentiment categories based on rating, and grouped into pain point categories based on keywords found in the review content.
 3. **Visualization** — the exploration results were built into an interactive Power BI dashboard with app and date-range filters.
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 ![Dashboard Preview](assets/dashboard_overview.png)
 
 A total of **13.933K reviews** were analyzed, with an overall average rating of **3.01/5** and **47.94% negative sentiment**.
 
-## 🔍 Key Findings
+## Key Findings
 
 **1. DANA has the most positive user sentiment**
 - Highest average rating: **3.90/5**
@@ -68,7 +68,7 @@ A total of **13.933K reviews** were analyzed, with an overall average rating of 
 - Breakdown of negative complaints: Other Concerns (4.4K), Transaction & Balance Issue (1.4K), System & Performance Error (0.5K), Account & Verification/KYC (0.3K), Promo & Cashback Issue (0.1K)
 - Since the current categorization relies on simple keyword matching (`LIKE`), this large "Other Concerns" bucket likely hides many specific pain points not yet captured by the existing keywords — a limitation and an opportunity for further development (see Limitations section).
 
-## 💡 Recommendations
+## Recommendations
 
 **For OVO (highest priority):**
 - Execute an immediate technical audit focusing on transaction processing (failed top-ups/transfers/balance deductions) and system stability (app freezes/crashes).
@@ -83,7 +83,7 @@ A total of **13.933K reviews** were analyzed, with an overall average rating of 
 **For future analysis (all apps):**
 - The dominant "Other Concerns" category should be further analyzed using NLP/topic modeling (rather than simple keyword `LIKE` matching) to produce more precise and actionable insights.
 
-## 🗂️ Methodology Highlights
+## Methodology Highlights
 
 <details>
 <summary>Sentiment classification based on rating (SQL)</summary>
@@ -113,7 +113,7 @@ END AS issue_category
 
 > The full query set (including rating aggregation, weekly trends, and window functions) is available in [`ewallet_analytics.sql`](ewallet_analytics.sql).
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 ├── assets                           # Dashboard overview
 ├── scrapping.py                     # Play Store review scraping script
@@ -123,7 +123,7 @@ END AS issue_category
 └── README.md
 ```
 
-## ⚠️ Limitations & Next Steps
+## Limitations & Next Steps
 - The current pain point categorization relies on simple keyword matching, making it prone to misclassification (e.g. ambiguous keywords) and resulting in a large "Other Concerns" bucket
 - Data is limited to Play Store reviews (does not yet cover App Store, social media, or customer service tickets)
 - Potential next steps: topic modeling/NLP for more granular categorization, and text-based sentiment analysis (beyond just star ratings) to capture more nuanced feedback
