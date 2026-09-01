@@ -115,6 +115,7 @@ END AS issue_category
 
 ## 📁 Repository Structure
 ```
+├── assets                           # Dashboard overview
 ├── scrapping.py                     # Play Store review scraping script
 ├── Scrapping.ipynb                  # Notebook version of the scraping process (Google Colab)
 ├── ewallet_analytics.sql            # All exploration & cleaning queries (PostgreSQL)
