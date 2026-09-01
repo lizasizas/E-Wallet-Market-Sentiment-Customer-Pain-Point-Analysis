@@ -126,6 +126,3 @@ END AS issue_category
 - The current pain point categorization relies on simple keyword matching, making it prone to misclassification (e.g. ambiguous keywords) and resulting in a large "Other Concerns" bucket
 - Data is limited to Play Store reviews (does not yet cover App Store, social media, or customer service tickets)
 - Potential next steps: topic modeling/NLP for more granular categorization, and text-based sentiment analysis (beyond just star ratings) to capture more nuanced feedback
-
-## 👤 Author
-**[Your Name]** — [LinkedIn](#) · [Portfolio](#)
