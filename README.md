@@ -4,6 +4,17 @@
 An end-to-end data analysis project examining user sentiment and key pain points across Indonesia's three largest e-wallets — **GoPay, OVO, and DANA** — based on Google Play Store user reviews.
 
 ---
+📌 **Read the full project breakdown & storytelling on Medium:**  
+👉 [**End-to-End Analytics: E-Wallet Market Sentiment & Customer Pain Point Analysis**](https://medium.com/@nurhalizasitiliza/end-to-end-analytics-e-wallet-market-sentiment-customer-pain-point-analysis-baf353403637)
+
+---
+
+## 🔗 Project Links
+- 📄 **Medium Article:** [Read the Detailed Case Study](https://medium.com/@nurhalizasitiliza/end-to-end-analytics-e-wallet-market-sentiment-customer-pain-point-analysis-baf353403637)
+- 🗃️ **SQL Scripts:** [`ewallet_analytics.sql`](ewallet_analytics.sql)
+- 📊 **Power BI Dashboard:** [`EWallet_Dashboard_Analysis.pbix`](EWallet_Dashboard_Analysis.pbix)
+
+---
 
 ## Business Problem
 
