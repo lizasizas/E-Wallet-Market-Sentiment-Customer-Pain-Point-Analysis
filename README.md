@@ -1,16 +1,11 @@
 # E-Wallet Market Sentiment & Customer Pain Point Analysis
 ### (GoPay vs OVO vs DANA)
 
-An end-to-end data analysis project examining user sentiment and key pain points across Indonesia's three largest e-wallets — **GoPay, OVO, and DANA** — based on Google Play Store user reviews.
-
 ---
+An end-to-end data analysis project examining user sentiment and key pain points across Indonesia's three largest e-wallets **GoPay, OVO, and DANA** based on Google Play Store user reviews.
+
 **Read the full project breakdown & storytelling on Medium:**  
 [**End-to-End Analytics: E-Wallet Market Sentiment & Customer Pain Point Analysis**](https://medium.com/@nurhalizasitiliza/end-to-end-analytics-e-wallet-market-sentiment-customer-pain-point-analysis-baf353403637)
-
-## Project Links
-- **Medium Article:** [Read the Detailed Case Study](https://medium.com/@nurhalizasitiliza/end-to-end-analytics-e-wallet-market-sentiment-customer-pain-point-analysis-baf353403637)
-- **SQL Scripts:** [`ewallet_analytics.sql`](ewallet_analytics.sql)
-- **Power BI Dashboard:** [`EWallet_Dashboard_Analysis.pbix`](EWallet_Dashboard_Analysis.pbix)
 
 ---
 
@@ -40,9 +35,9 @@ This project aims to answer those questions by quantitatively analyzing user rev
 ```
 Scraping (Play Store reviews) → Cleaning & Exploration (PostgreSQL) → Dashboard (Power BI)
 ```
-1. **Scraping** — collected the 5,000 most recent reviews per app (GoPay, OVO, DANA) from the Google Play Store using `google-play-scraper`, then exported to CSV.
-2. **Cleaning & Exploration** — data was cleaned (empty/too-short reviews removed), classified into sentiment categories based on rating, and grouped into pain point categories based on keywords found in the review content.
-3. **Visualization** — the exploration results were built into an interactive Power BI dashboard with app and date-range filters.
+1. **Scraping**: collected the 5,000 most recent reviews per app (GoPay, OVO, DANA) from the Google Play Store using `google-play-scraper`, then exported to CSV.
+2. **Cleaning & Exploration**: data was cleaned (empty/too-short reviews removed), classified into sentiment categories based on rating, and grouped into pain point categories based on keywords found in the review content.
+3. **Visualization**: the exploration results were built into an interactive Power BI dashboard with app and date-range filters.
 
 ## Dashboard Preview
 
@@ -57,7 +52,7 @@ A total of **13.933K reviews** were analyzed, with an overall average rating of 
 - Lowest negative sentiment percentage: **25.22%**
 - Very stable rating trend (flat around **3.89–3.90**), indicating consistent service quality over time
 
-**2. OVO has the most negative user sentiment — and by a wide margin**
+**2. OVO has the most negative user sentiment and by a wide margin**
 - Lowest average rating: **1.96/5**
 - Highest negative sentiment percentage: **74.81%** (out of 4.81K total reviews)
 - This isn't just about complaint *volume*, it's about *severity*. OVO's average rating is far below its two competitors, pointing to a more fundamental problem rather than mere perception
@@ -75,7 +70,7 @@ A total of **13.933K reviews** were analyzed, with an overall average rating of 
 
 **5. "Other Concerns" dominates all complaint categories (~65%)**
 - Breakdown of negative complaints: Other Concerns (4.4K), Transaction & Balance Issue (1.4K), System & Performance Error (0.5K), Account & Verification/KYC (0.3K), Promo & Cashback Issue (0.1K)
-- Since the current categorization relies on simple keyword matching (`LIKE`), this large "Other Concerns" bucket likely hides many specific pain points not yet captured by the existing keywords — a limitation and an opportunity for further development (see Limitations section).
+- Since the current categorization relies on simple keyword matching (`LIKE`), this large "Other Concerns" bucket likely hides many specific pain points not yet captured by the existing keywords, a limitation and an opportunity for further development (see Limitations section).
 
 ## Recommendations
 
